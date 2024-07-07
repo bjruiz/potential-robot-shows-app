@@ -22,9 +22,15 @@ body {
 li {
   font-family: "Martian Mono", monospace;
   font-optical-sizing: auto;
-  font-weight: <weight>;
+  font-weight: 400;
   font-style: normal;
   font-variation-settings: "wdth" 400;
+}
+
+.seeMe {
+  border-style: dashed;
+  border-width: 2px;
+  border-color:black;
 }
 
 /*  use # to prefix css selector or dom/html id attribute */
