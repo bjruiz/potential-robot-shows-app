@@ -8,3 +8,4 @@ I've been learning HTML, CSS, Python, Java, JavaScript, and SQL at the Universit
 
 *   🌍  I'm based in Alabama
 *   🚀  I'm currently working on [Shows App](http://bjruiz.github.io/potential-robot-shows-app/)
+*  the image below is my CodeAcademy500 proof
