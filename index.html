@@ -32,16 +32,6 @@
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="#">Need to watch</a>
           </li>
-
-          <!-- <li class="nav-item">
-            <a class="nav-link" href="#">Where to Watch Them</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Favorite Genres</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Already Watched</a>
-          </li> -->
           <li class="nav-item">
             <a class="nav-link" href="pages/about.html">About Me</a>
           </li>
@@ -58,20 +48,68 @@
     </div>
   </nav>
 
-  <!-- code for lists -->
-  <main class="m-2 p-2 seeMe">
-    <h2 class="header-font">Need to Watch</h2>
+  <main class="m-2 p-2 row">
+    <div class="col-lg-8 offset-lg-2">
+    <h2>Shows to Watch</h2>
     <div class="mb-3">
-      <button id="loadBtn" class="btn btn-outline-dark btn-lg">Load Shows</button>
-      <button id="clearBtn" class="btn btn-outline-dark btn-lg">Clear Shows</button>
-
+      
+      <button id="btnAddShow" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#addShowModal">add show</button>
+      
+      <button id="btnShowAll" class="btn btn-dark btn-sm">show all</button>
+      <button id="btnHideAll" class="btn btn-dark btn-sm">hide all</button>
+  
+      <button id="btnConsoleData" class="btn btn-dark btn-sm">write data object in console</button>
+  
     </div>
+  
+      <!-- Modal -->
+      <div id="addShowModal" class="modal fade" tabindex="-1" aria-labelledby="addShowModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Add New Show</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <ul class="list-group">
+  
+                <li class="input-group w-100">
+                  <span class="w-20 input-group-text">show title</span>
+                  <input id="showAddTitle" type="text" class="form-control" placeholder="show title">
+                </li>
+  
+                <li class="input-group w-100">
+                  <span class="w-20 input-group-text">genre</span>
+                  <input id="showAddGenre" type="text" class="form-control" placeholder="genre" >
+                </li>
+  
+                <li class="input-group w-100">
+                  <span class="w-20 input-group-text">rating</span>
+                  <input id="showAddRating" type="text" class="form-control" placeholder="rating">
+                </li>
+            
+                <li class="input-group w-100">
+                  <span class="w-20 input-group-text">platform</span>
+                   <input id="showAddPlatform" type="text" class="form-control" placeholder="platform">
+                </li>
+            
+                <li class="input-group w-100">
+                  <span class="w-20 input-group-text">watched?</span>
+                  <input id="showAddWatched" type="text" class="form-control" placeholder="watched">
+                </li>
+            
+              </ul>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button id="btnSaveShow" type="button" class="btn btn-primary">save show</button>
+            </div>
+          </div>
+        </div>
+      </div>
 
-    <ul id="showsList">
-      <li><i>Sweet Tooth</i></li>
-      <li><i>The Summer I Turned Pretty</i></li>
-      <li><i>Crime Scene: The Vanishing at Cecil Hotel</i></li>
-      <li><i>Behind Her Eyes</i></li>
+    <ul id="showsList" class="list-group">
+      <li class="list-group"><i>no shows loaded</i></li>
     </ul>
   </main>
 
@@ -88,7 +126,8 @@
   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js'></script>
   <script src='https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.3/jquery-ui.min.js'></script>
   <script src='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.min.js'></script>
-  <script src="scripts/shows-script.js"></script>
+  <script src='scripts/shows-scripts.js'></script>
+  <script src='scripts/data.js'></script>
   
 </body>
 </html>
